@@ -1,0 +1,696 @@
+{
+	"info": {
+		"_postman_id": "f0d9dd21-578e-4abd-b1d6-776db49b635c",
+		"name": "ESEN teszt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19188333"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/health",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "normal test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Tom Veitch, Kevin J. Anderson\",\r\n    \"publisher\": \"Warner Bros\",\r\n    \"price\": 1000,\r\n    \"publicationDate\": \"1994-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid test json",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Tom Veitch, Kevin J. Anderson\",\r\n    \"publisher\": \"Warner Bros\"\r\n    \"price\": 1000\r\n    \"publicationDate\": \"1994-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "high price",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"12\",\r\n    \"title\":\"3341\",\r\n    \"author\": \"11\",\r\n    \"publisher\": \"Kovi company kft\",\r\n    \"price\": 99999999910,\r\n    \"publicationDate\": \"2023-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "minus price",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Tom Veitch, Kevin J. Anderson\",\r\n    \"publisher\": \"company kft\",\r\n    \"price\": -1,\r\n    \"publicationDate\": \"2023-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "null price",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Tom Veitch, Kevin J. Anderson\",\r\n    \"publisher\": \"company kft\",\r\n    \"publicationDate\": \"2023-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "title - long",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\": \"dfkjnvkdfjnv kdsjfv klsdjvsdjnklv jsdvsdfv sdfv dsfv sdfv dnkvljndvlknd lfkjnvsd lkfjnv lksdjfnlv ksdjv sdnv\",\r\n    \"author\": \"Tom Veitch, Kevin J. Anderson\",\r\n    \"publisher\": \"Warner Bros\",\r\n    \"price\": 1000,\r\n    \"publicationDate\": \"1994-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "author - long",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Hubert Blaine Wolfeschlegelsteinhausenbergerdorff Sr\",\r\n    \"publisher\": \"Warner Bros\",\r\n    \"price\": 1000,\r\n    \"publicationDate\": \"1994-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "date - past",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Hubert Bbergerdorff Sr\",\r\n    \"publisher\": \"Warner Bros\",\r\n    \"price\": 1000,\r\n    \"publicationDate\": \"1700-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "date - invalid 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Hubert Bbergerdorff Sr\",\r\n    \"publisher\": \"Warner Bros\",\r\n    \"price\": 1000,\r\n    \"publicationDate\": \"2023-02-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "date - invalid 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Hubert Bbergerdorff Sr\",\r\n    \"publisher\": \"Warner Bros\",\r\n    \"price\": 1000,\r\n    \"publicationDate\": \"2023-12-32\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "date - invalid 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Hubert Bbergerdorff Sr\",\r\n    \"publisher\": \"Warner Bros\",\r\n    \"price\": 1000,\r\n    \"publicationDate\": \"01-01-2023\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "date - invalid 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Hubert Bbergerdorff Sr\",\r\n    \"publisher\": \"Warner Bros\",\r\n    \"price\": 1000,\r\n    \"publicationDate\": \"23-10-14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "date - empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Hubert Bbergerdorff Sr\",\r\n    \"publisher\": \"Warner Bros\",\r\n    \"price\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "date - future",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"title\":\"Tales of the Jedi: The Golden Age of the Sith\",\r\n    \"author\": \"Hubert Bladorff Sr\",\r\n    \"publisher\": \"Warner Bros\",\r\n    \"price\": 1000,\r\n    \"publicationDate\": \"2100-03-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"protocol": "http",
+					"host": [
+						"hudeblt-1xpb3m3"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "author",
+			"value": "Tom Veitch, Kevin J. Anderson",
+			"type": "string"
+		},
+		{
+			"key": "title",
+			"value": "Tales of the Jedi: The Golden Age of the Sith",
+			"type": "string"
+		}
+	]
+}
