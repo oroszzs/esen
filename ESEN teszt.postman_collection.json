@@ -1,9 +1,8 @@
 {
 	"info": {
-		"_postman_id": "f0d9dd21-578e-4abd-b1d6-776db49b635c",
+		"_postman_id": "38100261-0e8a-4401-899b-d5e99ae065e5",
 		"name": "ESEN teszt",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19188333"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -26,10 +25,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/health",
+					"raw": "http://172.22.229.10:8080/health",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -59,10 +61,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -101,10 +106,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -143,10 +151,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -185,10 +196,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -227,10 +241,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -269,10 +286,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -311,10 +331,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -353,10 +376,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -395,10 +421,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -437,10 +466,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -479,10 +511,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -521,10 +556,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -563,10 +601,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -605,10 +646,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
@@ -647,10 +691,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://hudeblt-1xpb3m3:8080/books",
+					"raw": "http://172.22.229.10:8080/books",
 					"protocol": "http",
 					"host": [
-						"hudeblt-1xpb3m3"
+						"172",
+						"22",
+						"229",
+						"10"
 					],
 					"port": "8080",
 					"path": [
